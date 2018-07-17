@@ -16,6 +16,13 @@ class CoursesController < ApplicationController
   end
 
   def update
+    @course = Course.find(params[:id])
+
+    if @course.update(course_params)
+      render json: @course
+    else
+      render json: { errors: @course.errors.full_messages }, status: 400
+    end
   end
 
   private
