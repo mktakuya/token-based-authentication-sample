@@ -11,7 +11,7 @@ class CoursesController < ApplicationController
     if @course.save
       render json: @course
     else
-      render json: { errors: @course.errors.full_messages }
+      render json: { errors: @course.errors.full_messages, status: 400 }
     end
   end
 
