@@ -22,6 +22,11 @@ class CourseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let composeButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.compose,
+                                                             target: self, action: #selector(composeButtonTapped))
+        self.navigationItem.setRightBarButtonItems([composeButton], animated: true)
+
+
         guard let course_id = course_id else {
             return
         }
@@ -51,6 +56,10 @@ class CourseViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+
+    @objc func composeButtonTapped() {
+        print("Tapped")
     }
     
 
