@@ -70,10 +70,12 @@ class CourseViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
         case "toSignInVC":
-            print("Do nothing")
+            let signInVC:SignInViewController = segue.destination as! SignInViewController
+            signInVC.before_course_id = self.course_id!
             break
         case "toEditCourseVC":
-            print("Do nothing")
+            let editCourseVC:EditCourseViewController = segue.destination as! EditCourseViewController
+            editCourseVC.course_id = self.course_id!
             break
         default:
             print("Do nothing")

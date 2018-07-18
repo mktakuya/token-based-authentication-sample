@@ -278,6 +278,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HKE-cm-KE7">
                                 <rect key="frame" x="156.5" y="290" width="62" height="30"/>
                                 <state key="normal" title="ログイン"/>
+                                <connections>
+                                    <action selector="tapLogInButton:" destination="VAD-nF-3ld" eventType="touchUpInside" id="YP3-oT-Inl"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ode-aV-jGJ">
                                 <rect key="frame" x="30" y="114" width="315" height="30"/>
@@ -301,7 +304,7 @@
                                 <rect key="frame" x="30" y="180" width="315" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -323,6 +326,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LrY-hv-cTo"/>
                     </view>
+                    <connections>
+                        <outlet property="nameField" destination="ode-aV-jGJ" id="3ce-3b-HN4"/>
+                        <outlet property="nameLabel" destination="ode-aV-jGJ" id="tnK-Cv-9Ho"/>
+                        <outlet property="passwordField" destination="NyU-DO-cVa" id="gDp-GL-QuU"/>
+                        <segue destination="Xji-Iu-BD9" kind="show" identifier="toEditCourseVCFromSignInVC" id="pVP-Ib-1OK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5cq-kt-YjV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -347,4 +356,7 @@
             <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="pVP-Ib-1OK"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -10,6 +10,8 @@ import UIKit
 
 class EditCourseViewController: UIViewController {
 
+    var course_id = -1
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -34,7 +34,7 @@
 		8FD0EF5E20FEE06400129E70 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		8FD0EF6220FEE7E000129E70 /* CourseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCell.swift; sourceTree = "<group>"; };
 		8FD0EF6420FEEF3200129E70 /* CourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewController.swift; sourceTree = "<group>"; };
-		8FD0EF6620FEFADB00129E70 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = "ios-client/SignInViewController.swift"; sourceTree = "<group>"; };
+		8FD0EF6620FEFADB00129E70 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		8FD0EF6820FEFB6300129E70 /* EditCourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCourseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -54,7 +54,6 @@
 		8F4A25AC20FDB2ED00F74DA3 = {
 			isa = PBXGroup;
 			children = (
-				8FD0EF6620FEFADB00129E70 /* SignInViewController.swift */,
 				8F4A25B720FDB2ED00F74DA3 /* ios-client */,
 				8F4A25B620FDB2ED00F74DA3 /* Products */,
 				8F4A25CC20FEDFEF00F74DA3 /* Frameworks */,
@@ -72,6 +71,7 @@
 		8F4A25B720FDB2ED00F74DA3 /* ios-client */ = {
 			isa = PBXGroup;
 			children = (
+				8FD0EF6620FEFADB00129E70 /* SignInViewController.swift */,
 				8FD0EF6220FEE7E000129E70 /* CourseCell.swift */,
 				8FD0EF6420FEEF3200129E70 /* CourseViewController.swift */,
 				8F4A25B820FDB2ED00F74DA3 /* AppDelegate.swift */,
