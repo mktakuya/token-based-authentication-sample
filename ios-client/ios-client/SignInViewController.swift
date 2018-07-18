@@ -50,7 +50,7 @@ class SignInViewController: UIViewController {
                 let new_token = json["token"].stringValue
                 userDefaults.setValue(new_token, forKey: "token")
 
-                self.performSegue(withIdentifier: "toEditVCFromSignInVC", sender: nil)
+                self.performSegue(withIdentifier: "toEditCourseVCFromSignInVC", sender: nil)
             } else {
                 print("Error")
             }
