@@ -234,13 +234,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sb1-Sz-cag">
-                                <rect key="frame" x="172" y="402.5" width="31" height="30"/>
-                                <state key="normal" title="送信"/>
-                                <connections>
-                                    <action selector="tapSubmitButton:" destination="Xji-Iu-BD9" eventType="touchUpInside" id="7gG-fz-SpX"/>
-                                </connections>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2HC-A7-1xn">
                                 <rect key="frame" x="30" y="252.5" width="315" height="120"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -251,6 +244,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sb1-Sz-cag">
+                                <rect key="frame" x="172" y="577" width="31" height="30"/>
+                                <state key="normal" title="送信"/>
+                                <connections>
+                                    <action selector="tapSubmitButton:" destination="Xji-Iu-BD9" eventType="touchUpInside" id="7gG-fz-SpX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -265,6 +265,7 @@
                             <constraint firstItem="wVF-nJ-nit" firstAttribute="leading" secondItem="Euh-oa-eZL" secondAttribute="leading" constant="30" id="WHS-IM-k7F"/>
                             <constraint firstItem="2HC-A7-1xn" firstAttribute="top" secondItem="lix-JZ-W9p" secondAttribute="bottom" constant="20" id="Wee-al-xId"/>
                             <constraint firstItem="Euh-oa-eZL" firstAttribute="trailing" secondItem="lix-JZ-W9p" secondAttribute="trailing" constant="30" id="WpD-s7-ZpF"/>
+                            <constraint firstItem="Euh-oa-eZL" firstAttribute="bottom" secondItem="sb1-Sz-cag" secondAttribute="bottom" constant="60" id="boT-8k-uae"/>
                             <constraint firstItem="2HC-A7-1xn" firstAttribute="leading" secondItem="Euh-oa-eZL" secondAttribute="leading" constant="30" id="diH-f7-Zqy"/>
                             <constraint firstItem="Euh-oa-eZL" firstAttribute="trailing" secondItem="Bqo-fz-cFx" secondAttribute="trailing" constant="30" id="gBX-n9-r9L"/>
                             <constraint firstItem="GNd-O3-9rQ" firstAttribute="leading" secondItem="Euh-oa-eZL" secondAttribute="leading" constant="30" id="gmo-Gp-rxj"/>
