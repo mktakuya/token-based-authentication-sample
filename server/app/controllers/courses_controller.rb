@@ -7,6 +7,12 @@ class CoursesController < ApplicationController
     render json: @courses
   end
 
+  def show
+    @course = Course.find(params[:id])
+
+    render json: @course
+  end
+
   def create
     @course = Course.new(course_params)
 
