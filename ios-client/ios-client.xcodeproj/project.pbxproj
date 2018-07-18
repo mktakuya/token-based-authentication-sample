@@ -18,6 +18,7 @@
 		8FD0EF6320FEE7E000129E70 /* CourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD0EF6220FEE7E000129E70 /* CourseCell.swift */; };
 		8FD0EF6520FEEF3200129E70 /* CourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD0EF6420FEEF3200129E70 /* CourseViewController.swift */; };
 		8FD0EF6720FEFADB00129E70 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD0EF6620FEFADB00129E70 /* SignInViewController.swift */; };
+		8FD0EF6920FEFB6300129E70 /* EditCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD0EF6820FEFB6300129E70 /* EditCourseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		8FD0EF6220FEE7E000129E70 /* CourseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCell.swift; sourceTree = "<group>"; };
 		8FD0EF6420FEEF3200129E70 /* CourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewController.swift; sourceTree = "<group>"; };
 		8FD0EF6620FEFADB00129E70 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = "ios-client/SignInViewController.swift"; sourceTree = "<group>"; };
+		8FD0EF6820FEFB6300129E70 /* EditCourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCourseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				8F4A25B820FDB2ED00F74DA3 /* AppDelegate.swift */,
 				8F4A25BA20FDB2ED00F74DA3 /* ViewController.swift */,
 				8F4A25BC20FDB2ED00F74DA3 /* Main.storyboard */,
+				8FD0EF6820FEFB6300129E70 /* EditCourseViewController.swift */,
 				8F4A25BF20FDB2EF00F74DA3 /* Assets.xcassets */,
 				8F4A25C120FDB2EF00F74DA3 /* LaunchScreen.storyboard */,
 				8F4A25C420FDB2EF00F74DA3 /* Info.plist */,
@@ -186,6 +189,7 @@
 				8FD0EF5F20FEE06400129E70 /* Course.swift in Sources */,
 				8FD0EF6720FEFADB00129E70 /* SignInViewController.swift in Sources */,
 				8F4A25BB20FDB2ED00F74DA3 /* ViewController.swift in Sources */,
+				8FD0EF6920FEFB6300129E70 /* EditCourseViewController.swift in Sources */,
 				8FD0EF6520FEEF3200129E70 /* CourseViewController.swift in Sources */,
 				8F4A25B920FDB2ED00F74DA3 /* AppDelegate.swift in Sources */,
 			);

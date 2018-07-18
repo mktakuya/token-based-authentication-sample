@@ -59,7 +59,26 @@ class CourseViewController: UIViewController {
     }
 
     @objc func composeButtonTapped() {
-        print("Tapped")
+        let userDefaults = UserDefaults.standard
+        guard let _ = userDefaults.string(forKey: "token") else {
+            performSegue(withIdentifier: "toSignInVC", sender: nil)
+            return
+        }
+        performSegue(withIdentifier: "toEditCourseVC", sender: nil)
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "toSignInVC":
+            print("Do nothing")
+            break
+        case "toEditCourseVC":
+            print("Do nothing")
+            break
+        default:
+            print("Do nothing")
+            break
+        }
     }
     
 
