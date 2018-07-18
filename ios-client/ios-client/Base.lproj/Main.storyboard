@@ -234,10 +234,23 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sb1-Sz-cag">
-                                <rect key="frame" x="172" y="282.5" width="31" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sb1-Sz-cag">
+                                <rect key="frame" x="172" y="402.5" width="31" height="30"/>
                                 <state key="normal" title="送信"/>
+                                <connections>
+                                    <action selector="tapSubmitButton:" destination="Xji-Iu-BD9" eventType="touchUpInside" id="7gG-fz-SpX"/>
+                                </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2HC-A7-1xn">
+                                <rect key="frame" x="30" y="252.5" width="315" height="120"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="nAe-Ey-JeQ"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -248,20 +261,29 @@
                             <constraint firstItem="Nwv-9x-FPF" firstAttribute="top" secondItem="GNd-O3-9rQ" secondAttribute="bottom" constant="20" id="MiN-4H-SLQ"/>
                             <constraint firstItem="Nwv-9x-FPF" firstAttribute="leading" secondItem="Euh-oa-eZL" secondAttribute="leading" constant="30" id="QEC-e5-Erz"/>
                             <constraint firstItem="Bqo-fz-cFx" firstAttribute="centerY" secondItem="Nwv-9x-FPF" secondAttribute="centerY" id="QsB-EC-jXF"/>
-                            <constraint firstItem="sb1-Sz-cag" firstAttribute="top" secondItem="lix-JZ-W9p" secondAttribute="bottom" constant="50" id="VG7-XS-El7"/>
                             <constraint firstItem="lix-JZ-W9p" firstAttribute="centerY" secondItem="vpR-KN-1g1" secondAttribute="centerY" id="WBX-Ti-hcc"/>
                             <constraint firstItem="wVF-nJ-nit" firstAttribute="leading" secondItem="Euh-oa-eZL" secondAttribute="leading" constant="30" id="WHS-IM-k7F"/>
+                            <constraint firstItem="2HC-A7-1xn" firstAttribute="top" secondItem="lix-JZ-W9p" secondAttribute="bottom" constant="20" id="Wee-al-xId"/>
                             <constraint firstItem="Euh-oa-eZL" firstAttribute="trailing" secondItem="lix-JZ-W9p" secondAttribute="trailing" constant="30" id="WpD-s7-ZpF"/>
+                            <constraint firstItem="2HC-A7-1xn" firstAttribute="leading" secondItem="Euh-oa-eZL" secondAttribute="leading" constant="30" id="diH-f7-Zqy"/>
                             <constraint firstItem="Euh-oa-eZL" firstAttribute="trailing" secondItem="Bqo-fz-cFx" secondAttribute="trailing" constant="30" id="gBX-n9-r9L"/>
                             <constraint firstItem="GNd-O3-9rQ" firstAttribute="leading" secondItem="Euh-oa-eZL" secondAttribute="leading" constant="30" id="gmo-Gp-rxj"/>
                             <constraint firstItem="sb1-Sz-cag" firstAttribute="centerX" secondItem="wyF-jw-ojx" secondAttribute="centerX" id="iKG-eS-gg7"/>
                             <constraint firstItem="Euh-oa-eZL" firstAttribute="trailing" secondItem="KU7-s7-n49" secondAttribute="trailing" constant="30" id="qpR-6c-EjJ"/>
                             <constraint firstItem="GNd-O3-9rQ" firstAttribute="top" secondItem="Euh-oa-eZL" secondAttribute="top" constant="20" id="rX5-XP-axh"/>
+                            <constraint firstItem="Euh-oa-eZL" firstAttribute="trailing" secondItem="2HC-A7-1xn" secondAttribute="trailing" constant="30" id="sJj-GW-QBm"/>
                             <constraint firstItem="KU7-s7-n49" firstAttribute="centerY" secondItem="GNd-O3-9rQ" secondAttribute="centerY" id="wjX-ko-PDQ"/>
                             <constraint firstItem="oFS-pr-Z7X" firstAttribute="centerY" secondItem="wVF-nJ-nit" secondAttribute="centerY" id="xkw-Js-via"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Euh-oa-eZL"/>
                     </view>
+                    <connections>
+                        <outlet property="codeField" destination="Bqo-fz-cFx" id="gB8-3w-90y"/>
+                        <outlet property="contentView" destination="2HC-A7-1xn" id="oP8-db-9J2"/>
+                        <outlet property="creditField" destination="lix-JZ-W9p" id="ugO-E4-zgL"/>
+                        <outlet property="instructorField" destination="oFS-pr-Z7X" id="GEH-6E-6F3"/>
+                        <outlet property="nameField" destination="KU7-s7-n49" id="bhJ-fh-Gkt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0nD-4c-Yra" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
