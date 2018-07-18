@@ -22,6 +22,15 @@ class EditCourseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let kbToolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 40))
+        kbToolBar.barStyle = UIBarStyle.default
+        kbToolBar.sizeToFit()
+        let spacer = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: self, action: nil)
+        let commitButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(commitButtonTapped))
+        kbToolBar.items = [spacer, commitButton]
+
+        contentView.inputAccessoryView = kbToolBar
+
         Alamofire.request("http://localhost:3000/courses/\(self.course_id)", method: .get).responseJSON { response in
             guard let object = response.result.value else {
                 return
@@ -64,7 +73,7 @@ class EditCourseViewController: UIViewController {
             "credit": self.creditField.text!,
             "content": self.contentView.text!
         ]
-        
+
         Alamofire.request("http://localhost:3000/courses/\(course_id)", method: .patch, parameters: params, encoding: JSONEncoding.default, headers: headers).responseJSON { response in
             guard let object = response.result.value else {
                 return
@@ -96,4 +105,7 @@ class EditCourseViewController: UIViewController {
     }
     */
 
+    @objc func commitButtonTapped (){
+        self.view.endEditing(true)
+    }
 }
