@@ -12,9 +12,12 @@ import SwiftyJSON
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var courses = [Course]()
+    var selected_course_id = -1;
+
     @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
+        tableView.delegate = self
         super.viewDidLoad()
 
         Alamofire.request("http://localhost:3000/courses", method: .get).responseJSON { response in
@@ -57,5 +60,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
 
+    func tableView(_ table: UITableView, didSelectRowAt indexPath:IndexPath) {
+        print("call didSelectRowAt")
+        self.selected_course_id = self.courses[indexPath.row].id!
+        performSegue(withIdentifier: "toCourseVC", sender: nil)
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toCourseVC" {
+
+            let courseVC:CourseViewController = segue.destination as! CourseViewController
+            courseVC.course_id = selected_course_id
+        }
+    }
 }
 

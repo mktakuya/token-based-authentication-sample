@@ -89,11 +89,79 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="xTv-EK-pFg" id="KbL-dl-ar9"/>
+                        <segue destination="jvl-dL-wZv" kind="show" identifier="toCourseVC" id="swi-9t-TEv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+        <!--Course View Controller-->
+        <scene sceneID="5GC-Wc-cBU">
+            <objects>
+                <viewController id="jvl-dL-wZv" customClass="CourseViewController" customModule="ios_client" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Gf-6C-xo7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="プログラミングⅡ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ACe-vU-nUN">
+                                <rect key="frame" x="90" y="50" width="195" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="科目コード: 0018" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XYE-4F-6BC">
+                                <rect key="frame" x="20" y="109" width="135" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="教員: 原田 恵雨" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5OM-XK-sxS">
+                                <rect key="frame" x="20" y="140" width="118" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="単位数: 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpo-GI-A6t">
+                                <rect key="frame" x="20" y="171" width="71" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="プログラミングⅡでは，より高度なプログラミング概念とその技法を修得する．" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNG-5V-gDU">
+                                <rect key="frame" x="20" y="207" width="335" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ACe-vU-nUN" firstAttribute="top" secondItem="fAz-c4-ece" secondAttribute="top" constant="30" id="PRK-Og-EfP"/>
+                            <constraint firstItem="cNG-5V-gDU" firstAttribute="leading" secondItem="fAz-c4-ece" secondAttribute="leading" constant="20" id="Q9w-1B-vKa"/>
+                            <constraint firstItem="5OM-XK-sxS" firstAttribute="top" secondItem="XYE-4F-6BC" secondAttribute="bottom" constant="10" id="QYH-Az-ltm"/>
+                            <constraint firstItem="gpo-GI-A6t" firstAttribute="leading" secondItem="5OM-XK-sxS" secondAttribute="leading" id="UZi-hg-9qd"/>
+                            <constraint firstItem="fAz-c4-ece" firstAttribute="trailing" secondItem="cNG-5V-gDU" secondAttribute="trailing" constant="20" id="e7w-Ky-Dk2"/>
+                            <constraint firstItem="5OM-XK-sxS" firstAttribute="leading" secondItem="XYE-4F-6BC" secondAttribute="leading" id="hXd-ol-ZT3"/>
+                            <constraint firstItem="cNG-5V-gDU" firstAttribute="top" secondItem="gpo-GI-A6t" secondAttribute="bottom" constant="15" id="kUG-Bk-fcM"/>
+                            <constraint firstItem="gpo-GI-A6t" firstAttribute="top" secondItem="5OM-XK-sxS" secondAttribute="bottom" constant="10" id="nAv-N1-HUL"/>
+                            <constraint firstItem="XYE-4F-6BC" firstAttribute="leading" secondItem="fAz-c4-ece" secondAttribute="leading" constant="20" id="whZ-Xg-HrZ"/>
+                            <constraint firstItem="ACe-vU-nUN" firstAttribute="centerX" secondItem="0Gf-6C-xo7" secondAttribute="centerX" id="yhn-Jo-SoA"/>
+                            <constraint firstItem="XYE-4F-6BC" firstAttribute="top" secondItem="ACe-vU-nUN" secondAttribute="bottom" constant="30" id="zdn-EE-4Zo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fAz-c4-ece"/>
+                    </view>
+                    <connections>
+                        <outlet property="codeLabel" destination="XYE-4F-6BC" id="fwc-lh-JuW"/>
+                        <outlet property="contentLabel" destination="cNG-5V-gDU" id="uGn-nC-uu1"/>
+                        <outlet property="creditLabel" destination="gpo-GI-A6t" id="sRZ-eK-Eur"/>
+                        <outlet property="instructorLabel" destination="5OM-XK-sxS" id="bSo-Xw-FTS"/>
+                        <outlet property="nameLabel" destination="ACe-vU-nUN" id="UDT-he-m06"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uOp-74-HkD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1048.8" y="132.68365817091455"/>
         </scene>
     </scenes>
 </document>
