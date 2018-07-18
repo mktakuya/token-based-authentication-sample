@@ -10,8 +10,9 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var courses = [Course]()
+    @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,7 @@ class ViewController: UIViewController {
                 course.content = data["content"].stringValue
 
                 self.courses.append(course)
+                self.tableView.insertRows(at: [IndexPath(row: self.courses.count - 1, section: 0)], with: UITableViewRowAnimation.none)
             }
         }
     }
@@ -39,5 +41,21 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.courses.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CourseCell", for: indexPath) as! CourseCell
+        let course = self.courses[indexPath.row]
+
+        cell.nameAndInstructorLabel.text = "\(course.name!) （\(course.instructor!)）"
+        cell.codeLabel.text = "科目コード: \(course.code!)"
+        cell.creditLabel.text = "単位数: \(course.credit!)"
+
+        return cell
+    }
+
 }
 

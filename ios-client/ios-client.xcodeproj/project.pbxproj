@@ -15,6 +15,7 @@
 		8F4A25CF20FEDFEF00F74DA3 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F4A25CD20FEDFEF00F74DA3 /* SwiftyJSON.framework */; };
 		8F4A25D020FEDFEF00F74DA3 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F4A25CE20FEDFEF00F74DA3 /* Alamofire.framework */; };
 		8FD0EF5F20FEE06400129E70 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD0EF5E20FEE06400129E70 /* Course.swift */; };
+		8FD0EF6320FEE7E000129E70 /* CourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD0EF6220FEE7E000129E70 /* CourseCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		8F4A25CD20FEDFEF00F74DA3 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		8F4A25CE20FEDFEF00F74DA3 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		8FD0EF5E20FEE06400129E70 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		8FD0EF6220FEE7E000129E70 /* CourseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 		8F4A25B720FDB2ED00F74DA3 /* ios-client */ = {
 			isa = PBXGroup;
 			children = (
+				8FD0EF6220FEE7E000129E70 /* CourseCell.swift */,
 				8F4A25B820FDB2ED00F74DA3 /* AppDelegate.swift */,
 				8F4A25BA20FDB2ED00F74DA3 /* ViewController.swift */,
 				8F4A25BC20FDB2ED00F74DA3 /* Main.storyboard */,
@@ -173,6 +176,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FD0EF6320FEE7E000129E70 /* CourseCell.swift in Sources */,
 				8FD0EF5F20FEE06400129E70 /* Course.swift in Sources */,
 				8F4A25BB20FDB2ED00F74DA3 /* ViewController.swift in Sources */,
 				8F4A25B920FDB2ED00F74DA3 /* AppDelegate.swift in Sources */,
