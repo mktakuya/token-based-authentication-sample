@@ -3,7 +3,7 @@ class UsersController < ApplicationController
     user = User.find_by(name: params[:name])
     if user && user.authenticate(params[:password])
       user.update(token: User.generate_token) unless user.token?
-      render json: user
+      render json: user, serializer: CurrentUserSerializer
     else
       render json: { errors: [ 'ユーザ名またはパスワードが違います' ] }, status: 401
     end
