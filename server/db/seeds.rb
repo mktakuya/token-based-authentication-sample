@@ -9,7 +9,9 @@
 User.delete_all
 Course.delete_all
 
-User.create(name: 'mktakuya', password: 'ahiruchan')
+user = User.create(name: 'mktakuya', password: 'ahiruchan')
+user.token = User.generate_token
+user.save
 
 Course.create(
   name: '創造工学Ⅲ',
